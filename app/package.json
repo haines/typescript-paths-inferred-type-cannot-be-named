@@ -1,0 +1,8 @@
+{
+  "name": "@ahaines/app",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@ahaines/lib": "*"
+  }
+}

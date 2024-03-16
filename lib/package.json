@@ -1,0 +1,8 @@
+{
+  "name": "@ahaines/lib",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./*": "./build/*.js"
+  }
+}

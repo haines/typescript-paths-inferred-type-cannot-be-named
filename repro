@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -o errexit
+set -o nounset
+set -o pipefail
+
+clean() {
+  rm -rf app/build lib/build
+}
+
+clean
+
+if ! tsc --build ; then
+  printf "\e[30;41m %s \e[0m\n" "Good build failed" >&2
+  exit 125
+fi
+
+clean
+
+if ! tsc --build tsconfig.bad.json ; then
+  printf "\e[31m%s\e[0m\n" "Bad build failed" >&2
+  exit 1
+fi

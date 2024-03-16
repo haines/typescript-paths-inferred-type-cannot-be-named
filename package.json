@@ -1,0 +1,15 @@
+{
+  "name": "@ahaines/monorepo",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "./app",
+    "./lib"
+  ],
+  "scripts": {
+    "repro": "./repro"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.2"
+  }
+}
